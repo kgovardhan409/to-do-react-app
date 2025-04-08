@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './ToDoComponent.css';
+import React, { useState } from "react";
+import "./ToDoComponent.css";
 
-const ToDoComponent = () => {
-  const [task, setTask] = useState('');
+function ToDoComponent() {
+  const [task, setTask] = useState("");
 
   const handleAddTask = () => {
-    if (task.trim() !== '') {
-      console.log('Add Task:', task);
-      setTask(''); // Clear the input
+    if (task.trim() !== "") {
+      console.log("Add Task:", task);
+      setTask(""); // Clear the input
     }
   };
 
@@ -17,15 +17,18 @@ const ToDoComponent = () => {
 
       <div className="inputContainer">
         <input
+          className="taskInput"
           type="text"
           value={task}
           onChange={(e) => setTask(e.target.value)}
           placeholder="Enter your task"
         />
-        <button onClick={handleAddTask}>Add</button>
+        <button className="addToDoBtn" onClick={handleAddTask}>
+          Add
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default ToDoComponent;

@@ -1,0 +1,38 @@
+.parantDiv {
+  text-align: center;
+  margin: 30px 30px 30px 30px;
+  border: 5px solid white;
+  border-radius: 15px;
+  padding: 30px;
+}
+.inputContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  margin-left: 575px;
+}
+
+.taskInput {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+  outline: none;
+}
+
+.addToDoBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: darkblue;
+}
