@@ -1,28 +1,24 @@
-import { Todo } from '../App';
-import './ToDoItem.css';
+import { Todo } from "../model/ToDoModel";
+import "./ToDoItem.css";
 
 interface TodoListProps {
-  todosItem: Todo;
+  toDoItem: Todo;
 }
 
-
-const ToDoItem: React.FC<TodoListProps> = ({ todosItem }) => {
+const ToDoItem: React.FC<TodoListProps> = ({ toDoItem }) => {
   return (
-
     <div className="todo-item">
-      <li key={todosItem.taskId} className='itemsLi'>
+      <li key={toDoItem.taskId} className="itemsLi">
+        <span>
+          {toDoItem.taskId} {toDoItem.taskName}
+        </span>
 
-        <span>{todosItem.taskName}</span>
-
-        <div style={{ display: 'flex', gap: '8px' }}>
-
+        <div style={{ display: "flex", gap: "8px" }}>
           <button className="deleteBtn">Delete</button>
           <button className="editBtn">Edit</button>
-
         </div>
       </li>
     </div>
-
   );
 };
 

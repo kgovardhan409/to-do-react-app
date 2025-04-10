@@ -1,24 +1,22 @@
 import "./App.css";
 import ToDoComponant from "./Components/ToDoComponant";
 import ToDoList from "./Components/ToDoList";
-
-export interface Todo {
-  taskId: number;
-  taskName: string;
-}
+import { Todo } from "./model/ToDoModel";
+import Parent from "./Parent";
 
 function App() {
-  
-  const list: Todo[] = [
-    { taskId: 1, taskName: "my task 1" },
-    { taskId: 2, taskName: "my task 2" },
-    { taskId: 3, taskName: "my task 3" },
+  const mylist: Todo[] = [
+    { taskId: 1, taskName: "my task abc" },
+    { taskId: 2, taskName: "my task badfa" },
+    { taskId: 3, taskName: "my task fsadfa" },
   ];
 
   return (
     <div className="container">
       <ToDoComponant />
-      <ToDoList todos={list} />
+      <ToDoList todos={mylist} />
+
+      <Parent />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Todo } from "../App";
+import { Todo } from "../model/ToDoModel";
 import ToDoItem from "./ToDoItem";
 
 interface TodoListProps {
@@ -8,13 +8,13 @@ interface TodoListProps {
 const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
   return (
     <div>
-      <h1 style={{textAlign:'center'}}>To Do List</h1>
+      <h1 style={{ textAlign: "center" }}>To Do List</h1>
       {/* Add your to-do list implementation here */}
       {todos.map((todo) => {
-        return <ToDoItem itemId={todo.taskId}  />;
+        return <ToDoItem toDoItem={todo} />;
       })}
-      {/* 
-      {props.todos
+
+      {/* {todos
         .filter((a) => a == "task2")
         .map((todo) => {
           return `Task 2 ${todo}`;
