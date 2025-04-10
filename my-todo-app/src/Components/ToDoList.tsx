@@ -8,10 +8,10 @@ interface TodoListProps {
 const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
   return (
     <div>
-      <h1>To Do List</h1>
+      <h1 style={{textAlign:'center'}}>To Do List</h1>
       {/* Add your to-do list implementation here */}
       {todos.map((todo) => {
-        return <ToDoItem itemId={todo.taskId} itemName={todo.taskName} />;
+        return <ToDoItem itemId={todo.taskId}  />;
       })}
       {/* 
       {props.todos

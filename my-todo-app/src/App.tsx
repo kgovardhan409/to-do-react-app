@@ -8,6 +8,7 @@ export interface Todo {
 }
 
 function App() {
+  
   const list: Todo[] = [
     { taskId: 1, taskName: "my task 1" },
     { taskId: 2, taskName: "my task 2" },
