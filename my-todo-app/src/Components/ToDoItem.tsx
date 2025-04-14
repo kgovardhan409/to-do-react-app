@@ -9,9 +9,7 @@ const ToDoItem: React.FC<TodoListProps> = ({ toDoItem }) => {
   return (
     <div className="todo-item">
       <li key={toDoItem.taskId} className="itemsLi">
-        <span>
-          {toDoItem.taskId} {toDoItem.taskName}
-        </span>
+        <span>{toDoItem.taskName}</span>
 
         <div style={{ display: "flex", gap: "8px" }}>
           <button className="deleteBtn">Delete</button>

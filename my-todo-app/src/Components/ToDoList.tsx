@@ -6,6 +6,7 @@ interface TodoListProps {
 }
 
 const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
+  // todos=mylist}
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>To Do List</h1>
