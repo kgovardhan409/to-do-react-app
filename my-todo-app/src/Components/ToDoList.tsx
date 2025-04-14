@@ -1,4 +1,5 @@
 import { Todo } from "../model/ToDoModel";
+import ToDoComponant from "./ToDoComponant";
 import ToDoItem from "./ToDoItem";
 
 interface TodoListProps {
@@ -6,9 +7,12 @@ interface TodoListProps {
 }
 
 const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
+  // const taskAdded () => {}
   // todos=mylist}
   return (
     <div>
+      <ToDoComponant />
+
       <h1 style={{ textAlign: "center" }}>To Do List</h1>
       {/* Add your to-do list implementation here */}
       {todos.map((todo) => {

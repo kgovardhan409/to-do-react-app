@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div className="container">
-      <ToDoComponant />
       <ToDoList todos={mylist} />
 
       {/* <Parent /> */}
@@ -51,3 +50,8 @@ export default App;
 
 // you have to practice props - 10 components with multiple props.. there should be parent component and child componet (10 parents, 10 childerens)
 // learn basics about state, why and how ?
+
+// Task 14 April
+
+// create a counter app using State --> incremnt button and decrement button and +10 button --> -10 button
+// try to create a calculator --> Input___ Buttons (+, /, -, %) Input___ --> output ____
