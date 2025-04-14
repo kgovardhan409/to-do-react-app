@@ -1,4 +1,7 @@
 import "./App.css";
+import ParantThree from "./Components/ParantThree";
+// import ParantTwo from "./Components/ParantTwo";
+// import ParantOne from "./Components/ParantOne";
 import ToDoComponant from "./Components/ToDoComponant";
 import ToDoList from "./Components/ToDoList";
 import { Todo } from "./model/ToDoModel";
@@ -23,6 +26,11 @@ function App() {
       <ToDoList todos={mylist} />
 
       {/* <Parent /> */}
+
+      {/* <ParantOne /> */}
+      {/* <ParantTwo /> */}
+
+      <ParantThree />
     </div>
   );
 }
