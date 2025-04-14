@@ -1,0 +1,21 @@
+.deleteBtn, .editBtn {
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color:#0000ff;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .deleteBtn:hover, .editBtn:hover {
+    background-color: darkblue;
+    border: 1px solid darkblue;
+    color: white;
+  }
+  .itemsLi {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 8px;
+}
