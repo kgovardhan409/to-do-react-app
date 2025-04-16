@@ -26,6 +26,11 @@ function App() {
       <ToDoList todos={mylist} />
 
       {/* <Parent /> */}
+
+      {/* <ParantOne /> */}
+      {/* <ParantTwo /> */}
+
+      <ParantThree />
     </div>
   );
 }
