@@ -1,11 +1,13 @@
 import "./App.css";
-import ParantThree from "./Components/ParantThree";
+// import ParantThree from "./Components/ParantThree";
 // import ParantTwo from "./Components/ParantTwo";
 // import ParantOne from "./Components/ParantOne";
 import ToDoComponant from "./Components/ToDoComponant";
 import ToDoList from "./Components/ToDoList";
+import Calculator from "./Components/Utilities/Calculator";
+// import Counter from "./Components/Utilities/Counter";
 import { Todo } from "./model/ToDoModel";
-import Parent from "./Parent";
+// import Parent from "./Parent";
 
 function App() {
   const mylist: Todo[] = [
@@ -14,11 +16,11 @@ function App() {
     { taskId: 3, taskName: "my task fsadfa" },
   ];
 
-  const reminders: Todo[] = [
-    { taskId: 1, taskName: "my task abc" },
-    { taskId: 2, taskName: "my task badfa" },
-    { taskId: 3, taskName: "my task fsadfa" },
-  ];
+  // const reminders: Todo[] = [
+  //   { taskId: 1, taskName: "my task abc" },
+  //   { taskId: 2, taskName: "my task badfa" },
+  //   { taskId: 3, taskName: "my task fsadfa" },
+  // ];
 
   return (
     <div className="container">
@@ -30,7 +32,12 @@ function App() {
       {/* <ParantOne /> */}
       {/* <ParantTwo /> */}
 
-      <ParantThree />
+      {/* <ParantThree /> */}
+
+    {/* <Counter /> */}
+    
+    <Calculator />
+
     </div>
   );
 }
