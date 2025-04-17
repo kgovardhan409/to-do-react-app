@@ -7,6 +7,8 @@ interface TodoListProps {
 
 const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
   // todos=mylist}
+  // I want ToDoItem child data in this parent component in console.. if you have time -- send this data to parent(App.tsx)
+  // practice states.. -- do some 5 or 10 components
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>To Do List</h1>
