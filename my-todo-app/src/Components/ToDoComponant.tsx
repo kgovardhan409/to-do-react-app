@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./ToDoComponent.css";
 
-function ToDoComponent() {
+const ToDoComponent: React.FC<any> = ({ toDoProps, myData }) => {
+  // toDoProps is a function given by the parent
   const [task, setTask] = useState("");
 
   const handleAddTask = () => {
+    console.log(myData); // parent to child - data passing...
     if (task.trim() !== "") {
       console.log("Add Task:", task);
+      toDoProps(task); // now I am calling parent function by passing parameter // child to parent - data passing...
       setTask(""); // Clear the input
     }
   };
@@ -29,6 +32,6 @@ function ToDoComponent() {
       </div>
     </div>
   );
-}
+};
 
 export default ToDoComponent;

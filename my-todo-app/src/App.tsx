@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import ParantFive from "./Components/ParantFive";
 import ParentSixReverseProps from "./Components/ParentSixReverseProps";
@@ -10,24 +11,30 @@ import ToDoList from "./Components/ToDoList";
 // import Calculator from "./Components/Utilities/Calculator";
 // import Counter from "./Components/Utilities/Counter";
 import { Todo } from "./model/ToDoModel";
-// import Parent from "./Parent";
 
 function App() {
-  const mylist: Todo[] = [
-    { taskId: 1, taskName: "my task abc" },
-    { taskId: 2, taskName: "my task badfa" },
-    { taskId: 3, taskName: "my task fsadfa" }, 
-  ];
-
-  // const reminders: Todo[] = [
-  //   { taskId: 1, taskName: "my task abc" },
-  //   { taskId: 2, taskName: "my task badfa" },
-  //   { taskId: 3, taskName: "my task fsadfa" },
+  // const mylist: Todo[] = [
+  //   {
+  //     taskId: 123,
+  //     taskName: "my task",
+  //   },
   // ];
+
+  const [mylist, setMylist] = useState<Todo[]>([]);
+
+  function receiveTodo(dada: string) {
+    let todoObj: Todo = {
+      taskId: Math.floor(Math.random() * 100),
+      taskName: dada,
+    };
+    console.log(mylist);
+    setMylist((pre) => [...pre, todoObj]);
+  }
 
   return (
     <div className="container">
-      <ToDoComponant />
+      <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
+
       <ToDoList todos={mylist} />
 
       {/* <Parent /> */}
@@ -56,6 +63,10 @@ export default App;
 // html + javascript -- JSX
 // public folder - static assets,
 
+// Time complexity -->
+
+// Space complexity -->
+
 // Re-usable components
 // Deviding components so that your code looks good
 
@@ -75,3 +86,7 @@ export default App;
 
 // you have to practice props - 10 components with multiple props.. there should be parent component and child componet (10 parents, 10 childerens)
 // learn basics about state, why and how ?
+
+// 17th April
+// I want ToDoItem child data in parent component(ToDoList) in console.. if you have time -- send this data to parent(App.tsx)
+// practice states.. -- do some 5 or 10 components
