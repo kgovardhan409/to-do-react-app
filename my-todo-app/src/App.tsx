@@ -1,10 +1,13 @@
 import "./App.css";
+import ParantFive from "./Components/ParantFive";
+import ParentSixReverseProps from "./Components/ParentSixReverseProps";
+// import ParantFour from "./Components/ParantFour";
 // import ParantThree from "./Components/ParantThree";
 // import ParantTwo from "./Components/ParantTwo";
 // import ParantOne from "./Components/ParantOne";
 import ToDoComponant from "./Components/ToDoComponant";
 import ToDoList from "./Components/ToDoList";
-import Calculator from "./Components/Utilities/Calculator";
+// import Calculator from "./Components/Utilities/Calculator";
 // import Counter from "./Components/Utilities/Counter";
 import { Todo } from "./model/ToDoModel";
 // import Parent from "./Parent";
@@ -13,7 +16,7 @@ function App() {
   const mylist: Todo[] = [
     { taskId: 1, taskName: "my task abc" },
     { taskId: 2, taskName: "my task badfa" },
-    { taskId: 3, taskName: "my task fsadfa" },
+    { taskId: 3, taskName: "my task fsadfa" }, 
   ];
 
   // const reminders: Todo[] = [
@@ -34,9 +37,15 @@ function App() {
 
       {/* <ParantThree /> */}
 
+      {/* <ParantFour /> */}
+
+      {/* <ParantFive /> */}
+
+      <ParentSixReverseProps />
+
     {/* <Counter /> */}
     
-    <Calculator />
+    {/* <Calculator /> */}
 
     </div>
   );
