@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import ParantFive from "./Components/ParantFive";
+// import ParantFive from "./Components/ParantFive";
 import ParentSixReverseProps from "./Components/ParentSixReverseProps";
 // import ParantFour from "./Components/ParantFour";
 // import ParantThree from "./Components/ParantThree";
@@ -23,7 +23,7 @@ function App() {
   const [mylist, setMylist] = useState<Todo[]>([]);
 
   function receiveTodo(dada: string) {
-    let todoObj: Todo = {
+    const todoObj: Todo = {
       taskId: Math.floor(Math.random() * 100),
       taskName: dada,
     };
