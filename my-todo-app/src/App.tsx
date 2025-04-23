@@ -1,16 +1,17 @@
 import { useState } from "react";
 import "./App.css";
 // import ParantFive from "./Components/ParantFive";
-import ParentSixReverseProps from "./Components/ParentSixReverseProps";
+// import ParentSixReverseProps from "./Components/ParentSixReverseProps";
 // import ParantFour from "./Components/ParantFour";
 // import ParantThree from "./Components/ParantThree";
 // import ParantTwo from "./Components/ParantTwo";
 // import ParantOne from "./Components/ParantOne";
-import ToDoComponant from "./Components/ToDoComponant";
-import ToDoList from "./Components/ToDoList";
+// import ToDoComponant from "./Components/ToDoComponant";
+// import ToDoList from "./Components/ToDoList";
 // import Calculator from "./Components/Utilities/Calculator";
 // import Counter from "./Components/Utilities/Counter";
 import { Todo } from "./model/ToDoModel";
+import UseEffectSample from "./Components/UseEffectSample";
 
 function App() {
   // const mylist: Todo[] = [
@@ -33,27 +34,12 @@ function App() {
 
   return (
     <div className="container">
-      <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
+      {/* <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
 
-      <ToDoList todos={mylist} />
+      <ToDoList todos={mylist} /> */}
 
       {/* <Parent /> */}
-
-      {/* <ParantOne /> */}
-      {/* <ParantTwo /> */}
-
-      {/* <ParantThree /> */}
-
-      {/* <ParantFour /> */}
-
-      {/* <ParantFive /> */}
-
-      <ParentSixReverseProps />
-
-    {/* <Counter /> */}
-    
-    {/* <Calculator /> */}
-
+      <UseEffectSample />
     </div>
   );
 }
@@ -90,3 +76,17 @@ export default App;
 // 17th April
 // I want ToDoItem child data in parent component(ToDoList) in console.. if you have time -- send this data to parent(App.tsx)
 // practice states.. -- do some 5 or 10 components
+
+// useEffect --> is a react hook.
+
+// syntax -->
+
+// useEffect(() => {
+
+//  }, []);
+
+// UseCases:
+//  1. To call an api's on page(component initilization) load.
+//  2. When you want to trigger a function when state changes. Even multiple state's when changed also useEffect is useful.
+//  3. If you want to change data which is browser level - page title, LocalStorage, Session Storage.
+//  4. If you want to load or set some default data
