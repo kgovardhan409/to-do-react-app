@@ -7,6 +7,9 @@ export const UseEffectSample = () => {
   // How will you communication ? using API's..
 
   const [dataResponse, setDataResponse] = useState<any>();
+  // const[genderValue, setGenderValue] = useState<string>();
+  const[genderValMale, setGnderValMale] = useState<string>();
+  const[genderValFemale, setGenderValFemale] = useState<string>();
 
   useEffect(() => {
     // const xhr = new XMLHttpRequest();
@@ -61,7 +64,17 @@ export const UseEffectSample = () => {
   }, []);
 
   function genderChanged(event: any) {
-    console.log(event.value);
+
+    const genderData: string = event.value;
+    
+    console.log("genderData:", genderData, "Type:", typeof genderData);
+
+    if(genderData === "123456"){
+      // setGnderValMale(event.value)
+    }else{
+      setGenderValFemale(event.value)
+    }
+    
   }
 
   return (
@@ -79,19 +92,22 @@ export const UseEffectSample = () => {
       <input
         type="radio"
         name="gender"
-        value="male"
+        value="Male -- Hello Handsome"
         onChange={(event) => genderChanged(event.target)}
       ></input>
       <label>Female</label>
       <input
         type="radio"
         name="gender"
-        value="female"
+        value="Female -- Hello Beauty"
         onChange={(event) => genderChanged(event.target)}
       ></input>
 
-      <h1>Male -- Hello Handsome</h1>
-      <h1>Female -- Hello Beautiful</h1>
+
+      {/* <h1>{genderValMale}</h1> */}
+      <h1>{genderValFemale}</h1>
+      {/* <h1>{genderValue ? genderValMale : genderValFemale}</h1> */}
+      {/* <h1>{genderValFemale}</h1> */}
     </div>
   );
 };
