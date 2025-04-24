@@ -4,6 +4,7 @@ import ToDoComponant from "./Components/ToDoComponant";
 import ToDoList from "./Components/ToDoList";
 import { Todo } from "./model/ToDoModel";
 import UseEffectSample from "./Components/UseEffectSample";
+import Parent from "./Parent";
 
 function App() {
   // const mylist: Todo[] = [
@@ -26,11 +27,11 @@ function App() {
 
   return (
     <div className="container">
-      {/* <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
+      <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
 
-      <ToDoList todos={mylist} /> */}
+      <ToDoList todos={mylist} />
 
-      {/* <Parent /> */}
+      <Parent />
       <UseEffectSample />
     </div>
   );
@@ -78,7 +79,11 @@ export default App;
 //  }, []);
 
 // UseCases:
-//  1. To call an api's on page(component initilization) load.
-//  2. When you want to trigger a function when state changes. Even multiple state's when changed also useEffect is useful.
+//  1. If you want to call an api's on page load (component initilization). If you want to load or set some default data
+//  2. When you want to trigger a function when state changes. **Even multiple state's when changed also useEffect is useful.
 //  3. If you want to change data which is browser level - page title, LocalStorage, Session Storage.
-//  4. If you want to load or set some default data
+//  4. you want to do something for every action in the component
+
+// Task 24 April
+// 1. use useEffect and call an api when page loaded - utilize xmlHttpRequest or fetch api - https://jsonplaceholder.typicode.com/posts
+// 2. use useEffect with dependency from the parent as props or if you find difficult atlease make for state in the component

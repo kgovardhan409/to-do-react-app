@@ -8,7 +8,17 @@ export const UseEffectSample = () => {
 
   const [dataResponse, setDataResponse] = useState<any>();
 
+  const [selectedGender, setSelectedGender] = useState<string>();
+
+  const [iamHungry, setIamHungry] = useState<boolean>();
+
+  const name = "Govardhan";
+
+  const pi = 3.27;
+
   useEffect(() => {
+    let userName = localStorage.getItem("userName"); // []
+    document.title = "Effects"; // []
     // const xhr = new XMLHttpRequest();
     // xhr.open("Get", "https://api.chucknorris.io/jokes/random");
     // xhr.send();
@@ -58,11 +68,35 @@ export const UseEffectSample = () => {
       .finally(() => {
         console.log("Api is triggered successfully");
       });
-  }, []);
+  }, []); // [] empty array - component is loaded successfully, so you do whatever you want.. ex. - call an api, give welcome banner,
 
-  function genderChanged(event: any) {
-    console.log(event.value);
-  }
+  //   useEffect(() => {
+  //     if (selectedGender) {
+  //       alert("Hello Gender has been changed");
+  //     }
+  //   }, [selectedGender]); //selectedGender changed, so you do wahtever you want ex. - show alert, call an api, etc..
+
+  useEffect(() => {
+    if (selectedGender && iamHungry) {
+      alert("Hello Gender has been changed and also i am hungry");
+    }
+  }, [selectedGender, iamHungry]); //selectedGender changed, so you do wahtever you want ex. - show alert, call an api, etc..
+
+  useEffect(() => {
+    console.log("I am triggered");
+  }); // no square brackets, no empty array, no dependencies..
+
+  // samples - setSamples state
+
+  //   useEffect(() => {
+  // setting data to the global context
+  //   }, [samples]);
+
+  // parts - setParts state
+
+  // images - setFiles state
+
+  // multiple dependency --> 1. data changed and 1. also user confirmed yes -- then only save it.. [selectedGender, iamHungry]
 
   return (
     <div>
@@ -79,19 +113,30 @@ export const UseEffectSample = () => {
       <input
         type="radio"
         name="gender"
-        value="male"
-        onChange={(event) => genderChanged(event.target)}
+        value="Male"
+        onChange={(event) => {
+          setSelectedGender(event.target.value);
+          alert("This is just for gender related event");
+        }}
       ></input>
       <label>Female</label>
       <input
         type="radio"
         name="gender"
-        value="female"
-        onChange={(event) => genderChanged(event.target)}
+        value="Female"
+        onChange={(event) => setSelectedGender(event.target.value)}
       ></input>
+      {selectedGender ? (
+        selectedGender == "Male" ? (
+          <h1>Male -- Hello Handsome</h1>
+        ) : (
+          <h1>Female -- Hello Beautiful</h1>
+        )
+      ) : (
+        <h1>No gender selected!!</h1>
+      )}
 
-      <h1>Male -- Hello Handsome</h1>
-      <h1>Female -- Hello Beautiful</h1>
+      <h2 onMouseOver={() => setIamHungry(true)}>Hover me</h2>
     </div>
   );
 };
