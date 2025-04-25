@@ -10,3 +10,11 @@ export interface Person {
   isMarried: boolean;
   company?: string;
 }
+
+
+export interface profileTypes{
+    name : string;
+    age: number;
+    location : string;
+    profession : string;
+}

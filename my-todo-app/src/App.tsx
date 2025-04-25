@@ -11,8 +11,11 @@ import "./App.css";
 // import Calculator from "./Components/Utilities/Calculator";
 // import Counter from "./Components/Utilities/Counter";
 import { Todo } from "./model/ToDoModel";
-import UseEffectSample from "./Components/UseEffectSample";
-import Parent from "./Parent";
+// import UseEffectSample from "./Components/UseEffectSample";
+// import Parent from "./Parent";
+import UseEffectDemo from "./Components/UseEffectDemo";
+import { profileTypes } from "./model/ToDoModel";
+
 
 function App() {
   // const mylist: Todo[] = [
@@ -33,14 +36,26 @@ function App() {
     setMylist((pre) => [...pre, todoObj]);
   }
 
+  const profile : profileTypes = {
+
+    name: 'Aisha Khan',
+    age: 28,
+    location: 'Andhra Pradesh',
+    profession: 'Frontend Developer'
+
+  }
+
+
+
   return (
     <div className="container">
-      <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
+      {/* <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} /> */}
 
-      <ToDoList todos={mylist} />
+      {/* <ToDoList todos={mylist} /> */}
 
-      <Parent />
-      <UseEffectSample />
+      {/* <Parent /> */}
+      {/* <UseEffectSample /> */}
+      <UseEffectDemo profileData={profile}/>
     </div>
   );
 }
