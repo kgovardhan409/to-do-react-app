@@ -1,10 +1,21 @@
 import { useState } from "react";
 import "./App.css";
-import ToDoComponant from "./Components/ToDoComponant";
-import ToDoList from "./Components/ToDoList";
+// import ParantFive from "./Components/ParantFive";
+// import ParentSixReverseProps from "./Components/ParentSixReverseProps";
+// import ParantFour from "./Components/ParantFour";
+// import ParantThree from "./Components/ParantThree";
+// import ParantTwo from "./Components/ParantTwo";
+// import ParantOne from "./Components/ParantOne";
+// import ToDoComponant from "./Components/ToDoComponant";
+// import ToDoList from "./Components/ToDoList";
+// import Calculator from "./Components/Utilities/Calculator";
+// import Counter from "./Components/Utilities/Counter";
 import { Todo } from "./model/ToDoModel";
-import UseEffectSample from "./Components/UseEffectSample";
-import Parent from "./Parent";
+// import UseEffectSample from "./Components/UseEffectSample";
+// import Parent from "./Parent";
+import UseEffectDemo from "./Components/UseEffectDemo";
+import { profileTypes } from "./model/ToDoModel";
+
 
 function App() {
   // const mylist: Todo[] = [
@@ -17,7 +28,7 @@ function App() {
   const [mylist, setMylist] = useState<Todo[]>([]);
 
   function receiveTodo(dada: string) {
-    let todoObj: Todo = {
+    const todoObj: Todo = {
       taskId: Math.floor(Math.random() * 100),
       taskName: dada,
     };
@@ -25,14 +36,26 @@ function App() {
     setMylist((pre) => [...pre, todoObj]);
   }
 
+  const profile : profileTypes = {
+
+    name: 'Aisha Khan',
+    age: 28,
+    location: 'Andhra Pradesh',
+    profession: 'Frontend Developer'
+
+  }
+
+
+
   return (
     <div className="container">
-      <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} />
+      {/* <ToDoComponant toDoProps={receiveTodo} myData={["abc", "cd"]} /> */}
 
-      <ToDoList todos={mylist} />
+      {/* <ToDoList todos={mylist} /> */}
 
-      <Parent />
-      <UseEffectSample />
+      {/* <Parent /> */}
+      {/* <UseEffectSample /> */}
+      <UseEffectDemo profileData={profile}/>
     </div>
   );
 }
