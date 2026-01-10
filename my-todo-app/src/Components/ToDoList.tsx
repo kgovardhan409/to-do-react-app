@@ -2,7 +2,7 @@ import { Todo } from "../model/ToDoModel";
 import ToDoItem from "./ToDoItem";
 
 interface TodoListProps {
-  todos: Todo[]; // this name only we should give it in the component param
+  todos: Todo[];
 }
 
 const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
