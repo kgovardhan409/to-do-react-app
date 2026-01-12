@@ -1,0 +1,18 @@
+/* # {
+background-color: rgb(91, 133, 133);
+width: auto;
+border: solid 2px ;
+} */
+
+
+
+#tabaleMain {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableHead, .tableBody {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }

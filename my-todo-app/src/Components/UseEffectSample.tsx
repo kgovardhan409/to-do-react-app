@@ -12,12 +12,12 @@ export const UseEffectSample = () => {
 
   const [iamHungry, setIamHungry] = useState<boolean>();
 
-  const name = "Govardhan";
+  // const name = "Govardhan";
 
-  const pi = 3.27;
+  // const pi = 3.27;
 
   useEffect(() => {
-    let userName = localStorage.getItem("userName"); // []
+    // const userName = localStorage.getItem("userName"); // []
     document.title = "Effects"; // []
     // const xhr = new XMLHttpRequest();
     // xhr.open("Get", "https://api.chucknorris.io/jokes/random");

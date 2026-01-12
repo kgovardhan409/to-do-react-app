@@ -4,9 +4,9 @@ import { Person } from "./model/ToDoModel";
 const Parent: React.FC = () => {
   function myfunction() {}
 
-  let message: String = "Hi";
+  // let message: String = "Hi";
 
-  let phoneNumber: number = 1234;
+  // let phoneNumber: number = 1234;
 
   const mahesh: Person = {
     firstName: "Mahesh",
